@@ -33,7 +33,7 @@ const chipsData=
 
   const margin = {top: 20, right: 30, bottom: 40, left: 100},
     width = 900 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    height = 400 - margin.top - margin.bottom;
 
 // boilerplate for setting up the SVG
 let svg = d3.select("#dataviz")
@@ -59,7 +59,7 @@ let svg = d3.select("#dataviz")
         svg.append("g").call(d3.axisLeft(yScale))
         
         svg.append("g")
-            .attr("transform", 'translate(0 , ${height})')
+            .attr("transform", `translate(0 , ${height})`)
             .call(d3.axisBottom(xScale))
         
         svg.selectAll("rect")
